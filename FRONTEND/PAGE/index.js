@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 window.onload = async () => {
 
     const products = await obtainProduct();
@@ -56,4 +57,28 @@ function showProduct(products) {
 
         tableBody.appendChild(row); 
     });
+=======
+async function obtainProduct(){
+let url = "https://api.mercadolibre.com/sites/MLU/search?category=MLU1144";
+let response = await fetch(url);
+let data = response.json();
+let product = data.results;
+return product;
+console.log(product);
+
+}
+
+
+function getProduct(){
+
+};
+
+window.onload = async ()=>{
+
+let obtain = await obtainProduct();
+console.log();
+
+
+
+>>>>>>> b9474459217a95ad7e0d57b82c8a9599f4f7e351
 };
