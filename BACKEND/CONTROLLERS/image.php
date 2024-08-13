@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 <?php
@@ -53,4 +54,61 @@ function cargarIMG()
 
 
 
+=======
+<?php
+
+<?php
+require_once "../models/modelsImage.php";
+
+
+$funcion = $_GET['funcion'];
+
+
+switch ($funcion) {
+
+    case "verImagen":
+
+        verIMG();
+
+        break;
+
+    case "cargarImagen":
+
+        cargarIMG();
+        break;
+}
+
+
+
+function verIMG()
+{
+    $imagenes = (new imagen())->verImg();
+    echo json_encode($imagenes);
+
+}
+
+
+function cargarIMG()
+{
+    $nombre = $_POST ['nombre'];
+    $imagen = $_FILES ['imagen'];
+   $resultado = (new imagen())->cargarImg($nombre,$imagen);
+   echo json_encode($resultado);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> b9474459217a95ad7e0d57b82c8a9599f4f7e351
 ?>
