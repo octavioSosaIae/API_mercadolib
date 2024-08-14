@@ -22,9 +22,13 @@ function save(){
 
     $id = $_POST['id'];
     $title = $_POST['title'];
+    $permalink = $_POST['permalink'];
+    $thumbnail = $_POST['thumbnail'];
     $price = $_POST['price'];
-    $img = $_POST['img'];
 
-    $result = (new product())->saveProduct($id, $title, $price,$img);
+    $result = (new product())->saveProduct($id, $title,$permalink,$thumbnail, $price);
     echo json_encode($result);
+
+
+    
 };
