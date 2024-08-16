@@ -33,7 +33,7 @@ function showProduct(products) {        // funcion para mostrar productos en una
         <td>${product.title}</td>
         <td><a href="${product.permalink}">visitar la pagina</a></td>
         <td><img src="${product.thumbnail}"></td>
-        <td>${product.price}</td>
+        <td>$ ${product.price}</td>
         `;
 
     let button = document.createElement("button");
@@ -53,6 +53,7 @@ async function sendDB(product) {      //  funcion para mandar la informacion de 
 
 
   console.log(product);
+  alert("se agrego corectamente" +" "+ product.title);
 
   let url = "http://localhost/API_mercadolib/BACKEND/CONTROLLERS/controller.php?function=saveProduct";
   let formData = new FormData();

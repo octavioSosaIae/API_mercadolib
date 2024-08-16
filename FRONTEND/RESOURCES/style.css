@@ -33,8 +33,11 @@ button {
     font-family: 'roboto';
     color: rgb(0, 0, 255);
     background-color: rgb(0, 183, 255);
+    cursor: pointer;
 }
-
+button:hover{
+    opacity: .7;
+}
 h1 {
     font-family: 'roboto';
     color: rgb(0, 0, 255);
